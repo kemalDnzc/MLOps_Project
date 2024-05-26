@@ -1,0 +1,17 @@
+<!-- templates/explain.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Explanation</title>
+    {% load static %}
+</head>
+<body>
+    <h1>Model Explanation</h1>
+    {% if shap_plot_path %}
+        <img src="{% static shap_plot_path %}" alt="SHAP Summary Plot">
+    {% else %}
+        <p>SHAP grafiği oluşturulamadı.</p>
+    {% endif %}
+</body>
+</html>
